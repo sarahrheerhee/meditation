@@ -1,0 +1,988 @@
+body, html {
+    	    max-width: 100%;
+    overflow-x: hidden;
+    background-color: black;
+    margin: 0; height: 300%; overflow: hidden;
+
+}
+#svgloader{
+	display: inline-block;
+	position: fixed;
+	width: 150px;
+	height: 150px;
+	 margin-top: -2%;
+	
+}
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  z-index: 10;
+}
+
+#ins{	
+	text-align: center;
+	font-family: proxima-nova, sans-serif;
+	margin-top: 8%;
+	font-size: 10pt;
+	color: #AAAAAA;
+	width: 20%;
+	line-height: 20pt;
+		z-index: 50000;
+	letter-spacing: 1.2pt;
+
+}
+
+#nothing{
+	text-align: center;
+		font-family: adobe-garamond-pro,sans-serif;
+		font-style: italic;
+		font-size: 18pt;
+		color: #888888;
+		z-index: 50000;
+		margin-top: 40%;
+
+
+}
+
+#begincontainer{
+	position: fixed;
+	background-color: black;
+	height: 100%;
+	width: 100%;
+/*	margin-left: 4%;*/
+	display: flex;
+	flex-direction: row;
+	z-index: 2;
+
+
+}
+#back{
+	width: 20%;
+	height: 10%;
+	
+	z-index: 5;
+	position: fixed;
+	margin-left: 1.5%;
+	margin-top: 1.7%;
+	font-family: proxima-nova, serif;
+	text-decoration: none;
+	font-size: 11pt;
+	letter-spacing: 1pt;
+
+	color: #888888;
+	transition: .3s;
+}
+
+#back:hover{
+	color: #DBDBDB;
+	transition: .3s;
+}
+
+
+
+
+.innerbegin{
+	width: 25%;
+	height: 100%;
+	border-right: solid 1px white;
+	  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+#mile{
+	width: 50px;
+	height: 100%;
+	background-color: #DBDBDB;
+	  transition: .5s;
+	  cursor: pointer;
+}
+
+.mile2{
+  background-color:#A7D8E8;
+  box-shadow: 0px 0px 40px 40px #A7D8E8 ;
+  transition: .5s;
+}
+
+#danaecont{
+
+height: 100%;
+width: 25%;
+background-color: black;
+z-index: 4;
+}
+
+#milecontainer{
+	background-color: black;
+	z-index: 5;
+	height: 100%;
+}
+#danae{
+
+
+height: 45%;
+margin-top: 66%;
+
+cursor: pointer;
+background-color: #DBDBDB;
+transition: .5s;
+}
+
+
+.danae{
+  background-color:#4182f2;
+  box-shadow: 0px 0px 40px 40px #4182f2 ;
+  transition: .5s;
+
+}
+
+#catso{
+  height: 400px;
+  width: 140%;
+transform: perspective(30px) rotateY(-3deg);
+  background: #DBDBDB;
+  margin: auto;
+  margin-top: 70%;
+  filter: none;
+  transition: .5s;
+cursor: pointer;
+z-index: 0;
+
+
+}
+
+.catso{
+	  z-index: 2;
+ box-shadow: var(--box-shadow);
+   box-shadow: 0px 0px 40px 40px  #f11717;
+  /*filter: drop-shadow(0px 0px 13px #f11717) 
+  drop-shadow(0px 0px 25px #f11717);*/
+
+/*  drop-shadow(0px 0px 14px #f00236)*/
+
+
+
+
+
+
+  transition: 1.5s;
+}
+
+#circle{
+	z-index: 5;
+	background-color: black;
+	z-index: 5;
+}
+
+#untitled{
+	width: 110%;
+	height: 50%;
+	border-radius: 50%;
+	background-color: #DBDBDB;
+/*	z-index: 2;*/
+	margin-top: 60%;
+	margin-left: -30%;
+	transition: .5s;
+	cursor: pointer;
+}
+
+.untitled{
+  background-color:#DBDBDB;
+  box-shadow: 0px 0px 40px 40px #DBDBDB;
+  transition: .5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==================================== 
+  Our Modal Window styles
+=====================================*/
+
+.overlays{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 0;
+	background:transparent;
+	color: #DBDBDB;
+
+
+}
+.modal__overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 1.55s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  z-index: -100;
+}
+
+.modal__overlay2 {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 800;
+  justify-content: center;
+  align-items: center;
+  transition: all 1.55s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.sidebar{
+	font-family: proxima-nova,sans-serif;
+	color: #888888;
+	font-size:12pt;
+		margin-left: 1.5%;
+	
+	
+	letter-spacing: 1pt;
+	width: 4%;
+	position: fixed;
+	bottom:1.7%;
+
+
+}
+
+#sidebarcollapse{
+
+	width:25%;
+	height: 30%%;
+	bottom:4%;
+	margin-left: -25%;
+	position: fixed;
+	transition: 1s;
+	visibility: hidden;
+
+
+	
+
+}
+#question{
+	font-family: proxima-nova,sans-serif;
+	margin-left: 5.7%;
+	color: #DBDBDB;
+	width:25%;
+	position: fixed;
+	top:2.5%;
+	left: -2%;
+	visibility: hidden;
+	cursor: default;
+}
+
+.show{
+	visibility: visible !important;
+}
+
+.hole{
+	position: fixed;
+	width:100%;
+	height: 100%; 
+}
+
+
+
+.questionmarkcircle{
+    position: fixed;
+    top: 2%;
+    left: 1.5%;
+    font-family: houschka-rounded, sans-serif;
+    width: 21%;
+    height: 25px;
+    color: #888888;
+    text-align: center;
+    transition: .3s;
+    cursor: default;
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+#mark1{
+	margin-top: 5%; 
+
+}
+#mark{	
+
+	border-radius: 50%;
+	border: 1.2pt solid #888888;
+	width: 25px;
+	height: 25px;
+}
+
+
+#hover{
+font-family: proxima-nova,sans-serif;
+margin-left: 10px;
+margin-top: 5px;
+visibility: hidden;
+color: white;
+}
+
+
+
+
+
+.sidebarexpand{
+margin-left:0% !important;
+
+/*	width:100% !important;*/
+	transition: 1s;
+	z-index: 1000;	
+	visibility: visible !important;
+
+}
+
+
+#sidebartext{
+	font-family: proxima-nova,sans-serif;
+	margin-left: 5.7%;
+	color: #444444;
+
+}
+
+#original{
+
+	color: #888888;
+	font-size: 10pt;
+	letter-spacing: 1px;
+}
+
+
+#location{
+	font-family: adobe-garamond-pro,sans-serif;
+	font-style: italic;
+	font-size: 10pt;
+	position: fixed;
+	bottom:.3%;
+	color: #888888;
+	right:1.7%;
+
+	transition: 1s;
+	cursor: pointer;
+}
+
+#location:hover{
+	color: white;
+	transition: 1s;
+}
+/*#location2{
+	width: 80%;
+	height:80%;
+}*/
+
+#infohead{
+	color: #888888;
+	transition: .3s;
+}
+
+#infohead:hover{
+	color: white;
+	cursor: pointer;
+	transition: .3s;
+}
+
+
+
+.close{
+	cursor: pointer;
+	position: fixed;
+
+right:1.3%;
+top: 2%;
+text-align: center;
+position: fixed;
+	font-size: 14pt;
+	font-family: houschka-rounded, sans-serif;
+font-weight: 500;
+font-style: normal;
+border: 1.2pt solid #888888;
+
+	
+transition: .3s;
+
+}
+
+#closecircle{
+		width: 25px;
+	height: 25px;
+	color: #888888;
+
+	transition: .3s;
+	margin-top: -6.5%;
+	/*border-radius: 50%;*/
+}
+
+
+#closecircle:hover{
+	color: black;
+}
+
+.close:hover{
+/*	border-color: black;*/
+	background-color: #DBDBDB;
+	border: 1.2pt solid #DBDBDB;
+	color:black !important;
+transition: .3s;
+}
+
+
+
+#closecatso{
+		width: 25px;
+	height: 25px;
+	color: #888888;
+	
+	transition: .3s;
+	margin-top: -6.5%;
+	/*border-radius: 50%;*/
+}
+
+
+#closecatso:hover{
+	color: black;
+}
+
+.z{
+	z-index: 200;
+	transition: all 1.55s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+
+}
+
+
+
+#circlesvg{
+
+	width: 80%;
+	height: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -2%;
+
+}
+#catsosvg{
+
+	width: 80%;
+	height: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3%;
+
+}
+
+#danaesvg{
+
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 50000;
+
+
+}
+
+
+.overlay_catso {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 1.55s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -100;
+  position: absolute;
+}
+
+.overlay_catso2 {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 800;
+  transition: all 1.55s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.overlay_mile {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 1.55s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -100;
+  position: absolute;
+}
+
+.overlay_mile2 {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 800;
+  transition: all 1.55s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+.overlay_danae{
+	 position: relative;
+  width: 100%;
+ height: 100%;
+
+  background-color: black;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 1.55s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -100;
+ 
+}
+
+
+.overlay_danae2{
+  opacity: 1;
+  transform: scale(1);
+  z-index: 800;
+  transition: all 1.55s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sidebarcatso{
+	font-family: proxima-nova,sans-serif;
+	color: #888888;
+	font-size:12pt;
+		margin-left: 1.5%;
+	
+	
+	letter-spacing: 1pt;
+	width: 4%;
+	position: fixed;
+	bottom:1.7%;
+
+
+}
+
+#sidebarcollapsecatso{
+
+	width:25%;
+	height: 30%%;
+	bottom:4%;
+	margin-left: -25%;
+	position: fixed;
+	transition: 1s;
+	visibility: hidden;
+
+
+	
+
+}
+#questioncatso{
+	font-family: proxima-nova,sans-serif;
+	margin-left: 5.7%;
+	color: #DBDBDB;
+	width:25%;
+	position: fixed;
+	top:2.5%;
+	left: -2%;
+	visibility: hidden;
+	cursor: default;
+}
+
+.show{
+	visibility: visible !important;
+}
+#questionmarkcatso{
+	position: fixed;
+	top: 2%;
+	left:1.3%;
+	font-family: houschka-rounded, sans-serif;
+	width: 25px;
+	height: 25px;
+	color: #888888;
+	text-align:center;
+	border: 1.2pt solid #888888;
+	transition: .3s;
+cursor: default;
+	border-radius: 50%;
+
+}
+
+/*
+#questionmark:hover{
+	border: 1.2pt solid #DBDBDB;
+	background-color: #DBDBDB;
+	color: black;
+	transition: .3s;
+}
+*/
+#markcatso{
+	margin-top: 6.5%;
+}
+#sidebartextcatso{
+	font-family: proxima-nova,sans-serif;
+	margin-left: 5.7%;
+	color: #555555;
+}
+
+#infoheadcatso{
+	color: #888888;
+	transition: .3s;
+}
+
+#infoheadcatso:hover{
+	color: white;
+	cursor: pointer;
+	transition: .3s;
+}
+
+
+
+
+
+
+
+
+/*-------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sidebarmile{
+	font-family: proxima-nova,sans-serif;
+	color: #888888;
+	font-size:12pt;
+		margin-left: 1.5%;
+	
+	background-color: black;
+	z-index: 5000;
+	letter-spacing: 1pt;
+	width: 4%;
+	position: fixed;
+	bottom:1.7%;
+
+
+}
+
+#sidebarcollapsemile{
+
+	width:25%;
+	height: 30%%;
+	bottom:4%;
+	margin-left: -25%;
+	position: fixed;
+	transition: 1s;
+	visibility: hidden;
+
+background-color: black;
+	
+
+}
+#questionmile{
+	font-family: proxima-nova,sans-serif;
+	margin-left: 5.7%;
+	color: #DBDBDB;
+	width:25%;
+	position: fixed;
+	top:2.5%;
+	left: -2%;
+	visibility: hidden;
+	cursor: default;
+}
+
+.show{
+	visibility: visible !important;
+}
+#questionmarkmile{
+	position: fixed;
+	top: 2%;
+	left:1.3%;
+	font-family: houschka-rounded, sans-serif;
+	width: 25px;
+	height: 25px;
+	color: #888888;
+	text-align:center;
+	border: 1.2pt solid #888888;
+	transition: .3s;
+cursor: default;
+	border-radius: 50%;
+
+}
+
+/*
+#questionmark:hover{
+	border: 1.2pt solid #DBDBDB;
+	background-color: #DBDBDB;
+	color: black;
+	transition: .3s;
+}
+*/
+#markmile{
+	margin-top: 6.5%;
+}
+#sidebartextmile{
+	font-family: proxima-nova,sans-serif;
+	margin-left: 5.7%;
+	color: #555555;
+	
+
+}
+
+#infoheadmile{
+	color: #888888;
+	transition: .3s;
+}
+
+#infoheadmile:hover{
+	color: white;
+	cursor: pointer;
+	transition: .3s;
+}
+
+#closemile{
+		width: 25px;
+	height: 25px;
+	color: #888888;
+	
+	transition: .3s;
+	margin-top: -6.5%;
+	/*border-radius: 50%;*/
+}
+
+
+#closemile:hover{
+	color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sidebardanae{
+	font-family: proxima-nova,sans-serif;
+	color: #888888;
+	font-size:12pt;
+		margin-left: 1.5%;
+	
+	/*background-color: black;*/
+	z-index: 5000;
+	letter-spacing: 1pt;
+	width: 4%;
+	position: fixed;
+	bottom:1.7%;
+
+
+}
+
+#sidebarcollapsedanae{
+
+	width:25%;
+	height: 30%%;
+	bottom:4%;
+	margin-left: -25%;
+	position: fixed;
+	transition: 1s;
+	visibility: hidden;
+background-color: black;
+
+	
+
+}
+#questiondanae{
+	font-family: proxima-nova,sans-serif;
+	margin-left: 5.7%;
+	color: #DBDBDB;
+	width:25%;
+	position: fixed;
+	top:2.5%;
+	left: -2%;
+	visibility: hidden;
+	cursor: default;
+}
+
+.show{
+	visibility: visible !important;
+}
+#questionmarkdanae{
+	position: fixed;
+	top: 2%;
+	left:1.3%;
+	font-family: houschka-rounded, sans-serif;
+	width: 25px;
+	height: 25px;
+	color: #888888;
+	text-align:center;
+	border: 1.2pt solid #888888;
+	transition: .3s;
+cursor: default;
+	border-radius: 50%;
+
+}
+
+/*
+#questionmark:hover{
+	border: 1.2pt solid #DBDBDB;
+	background-color: #DBDBDB;
+	color: black;
+	transition: .3s;
+}
+*/
+#markdanae{
+	margin-top: 6.5%;
+}
+#sidebartextdanae{
+	font-family: proxima-nova,sans-serif;
+	margin-left: 5.7%;
+	color: #555555;
+
+
+}
+
+#infoheaddanae{
+	color: #888888;
+	transition: .3s;
+}
+
+#infoheaddanae:hover{
+	color: white;
+	cursor: pointer;
+	transition: .3s;
+}
+
+#closedanae{
+		width: 25px;
+	height: 25px;
+	color: #888888;
+	
+	transition: .3s;
+	margin-top: -6.5%;
+	/*border-radius: 50%;*/
+}
+
+
+#closedanae:hover{
+	color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
